@@ -11,6 +11,7 @@ import {
 } from '../channeldef';
 import {Config, StyleConfigIndex} from '../config';
 import {MarkConfig, MarkDef} from '../mark';
+import {fieldValidPredicate} from '../predicate';
 import {ScaleType} from '../scale';
 import {SortFields} from '../sort';
 import {formatExpression, TimeUnit} from '../timeunit';
@@ -142,7 +143,7 @@ export function numberFormatExpr(field: string, specifiedFormat: string, config:
 }
 
 export function binFormatExpression(startField: string, endField: string, format: string, config: Config) {
-  return `${startField} === null || isNaN(${startField}) ? "null" : ${numberFormatExpr(
+  return `${fieldValidPredicate(startField, false)} ? "null" : ${numberFormatExpr(
     startField,
     format,
     config
@@ -194,7 +195,7 @@ export function sortParams(
 
 export type AxisTitleComponent = AxisComponentProps['title'];
 
-export function mergeTitleFieldDefs(f1: FieldDefBase<string>[], f2: FieldDefBase<string>[]) {
+export function mergeTitleFieldDefs(f1: readonly FieldDefBase<string>[], f2: readonly FieldDefBase<string>[]) {
   const merged = [...f1];
 
   f2.forEach(fdToMerge => {

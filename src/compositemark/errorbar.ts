@@ -11,7 +11,7 @@ import {GenericUnitSpec, NormalizedLayerSpec} from '../spec';
 import {Step} from '../spec/base';
 import {TitleParams} from '../title';
 import {AggregatedFieldDef, CalculateTransform, Transform} from '../transform';
-import {Flag, keys, titlecase} from '../util';
+import {Flag, keys, replaceAll, titlecase} from '../util';
 import {CompositeMarkNormalizer} from './base';
 import {
   compositeMarkContinuousAxis,
@@ -77,7 +77,7 @@ export interface ErrorBarConfig extends ErrorBarPartsMixins {
    * - `"median"`: the median of the data points.
    *
    * __Default value:__ `"mean"`.
-   * @hide
+   * @hidden
    */
 
   // center is not needed right now but will be added back to the schema if future features require it.
@@ -305,8 +305,8 @@ export function errorBarParams<
     name?: string;
     description?: string;
     transform?: Transform[];
-    width?: number | Step;
-    height?: number | Step;
+    width?: number | 'container' | Step;
+    height?: number | 'container' | Step;
   };
   tooltipEncoding: ErrorEncoding<string>;
 } {
@@ -532,9 +532,7 @@ function errorBarAggregationAndCalculation<
     for (const postAggregateCalculate of postAggregateCalculates) {
       tooltipSummary.push({
         fieldPrefix: postAggregateCalculate.as.substring(0, 6),
-        titlePrefix: postAggregateCalculate.calculate
-          .replace(new RegExp('datum\\[\\"', 'g'), '')
-          .replace(new RegExp('\\"\\]', 'g'), '')
+        titlePrefix: replaceAll(replaceAll(postAggregateCalculate.calculate, 'datum["', ''), '"]', '')
       });
     }
   }

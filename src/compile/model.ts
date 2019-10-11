@@ -289,7 +289,7 @@ export abstract class Model {
   public abstract assembleSelectionTopLevelSignals(signals: NewSignal[]): NewSignal[];
   public abstract assembleSignals(): NewSignal[];
 
-  public abstract assembleSelectionData(data: VgData[]): VgData[];
+  public abstract assembleSelectionData(data: readonly VgData[]): readonly VgData[];
 
   public assembleGroupStyle(): string | string[] {
     if (this.type === 'unit' || this.type === 'layer') {
@@ -510,7 +510,7 @@ export abstract class Model {
               signal: sizeExpr(scaleName, scaleComponent, fieldRef)
             };
           } else {
-            log.warn('Unknown field for ${channel}.  Cannot calculate view size.');
+            log.warn(`Unknown field for ${channel}. Cannot calculate view size.`);
             return null;
           }
         }
@@ -556,7 +556,7 @@ export abstract class Model {
   /**
    * @return scale name for a given channel after the scale has been parsed and named.
    */
-  public scaleName(originalScaleName: Channel | string, parse?: boolean): string {
+  public scaleName(originalScaleName: ScaleChannel | string, parse?: boolean): string {
     if (parse) {
       // During the parse phase always return a value
       // No need to refer to rename map because a scale can't be renamed
@@ -666,7 +666,7 @@ export abstract class ModelWithField extends Model {
 
   protected abstract getMapping(): {[key in Channel]?: any};
 
-  public reduceFieldDef<T, U>(f: (acc: U, fd: FieldDef<string>, c: Channel) => U, init: T, t?: any) {
+  public reduceFieldDef<T, U>(f: (acc: U, fd: FieldDef<string>, c: Channel) => U, init: T): T {
     return reduce(
       this.getMapping(),
       (acc: U, cd: ChannelDef, c: Channel) => {
@@ -676,8 +676,7 @@ export abstract class ModelWithField extends Model {
         }
         return acc;
       },
-      init,
-      t
+      init
     );
   }
 
