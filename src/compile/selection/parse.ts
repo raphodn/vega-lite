@@ -62,7 +62,7 @@ export function parseSelectionPredicate(
   model: Model,
   selections: LogicalOperand<string>,
   dfnode?: DataFlowNode,
-  datum: string = 'datum'
+  datum = 'datum'
 ): string {
   const stores: string[] = [];
   function expr(name: string): string {
