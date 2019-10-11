@@ -229,8 +229,18 @@
       "gradientLength": {"signal": "clamp(child_height, 64, 200)"},
       "symbolType": "circle",
       "title": "gender",
-      "encode": {"symbols": {"update": {"fill": {"value": "transparent"}}}}
+      "encode": {
+        "symbols": {
+          "name": "gender_legend_symbols",
+          "interactive": false,
+          "update": {"fill": {"value": "transparent"}}
+        }
+      }
     }
   ],
-  "config": {"background": "white", "style": {"cell": {"fill": "yellow"}}}
+  "config": {
+    "background": "white",
+    "legend": {"unselectedOpacity": 0.35},
+    "style": {"cell": {"fill": "yellow"}}
+  }
 }

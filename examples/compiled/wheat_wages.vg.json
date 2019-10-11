@@ -342,6 +342,7 @@
       "gridOpacity": 0.25,
       "domain": false
     },
+    "legend": {"unselectedOpacity": 0.35},
     "style": {"cell": {"stroke": "transparent"}}
   }
 }

@@ -615,6 +615,7 @@
   "config": {
     "background": "white",
     "axisX": {"titleLimit": 150},
-    "axisY": {"minExtent": 40}
+    "axisY": {"minExtent": 40},
+    "legend": {"unselectedOpacity": 0.35}
   }
 }

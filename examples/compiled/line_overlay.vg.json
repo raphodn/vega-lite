@@ -186,8 +186,14 @@
       "symbolType": "circle",
       "title": "symbol",
       "fill": "color",
-      "encode": {"symbols": {"update": {"opacity": {"value": 1}}}}
+      "encode": {
+        "symbols": {
+          "name": "symbol_legend_symbols",
+          "interactive": false,
+          "update": {"opacity": {"value": 1}}
+        }
+      }
     }
   ],
-  "config": {"background": "white"}
+  "config": {"background": "white", "legend": {"unselectedOpacity": 0.35}}
 }

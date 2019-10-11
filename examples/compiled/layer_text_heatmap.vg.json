@@ -138,5 +138,9 @@
       "symbolType": "square"
     }
   ],
-  "config": {"background": "white", "style": {"text": {"baseline": "middle"}}}
+  "config": {
+    "background": "white",
+    "legend": {"unselectedOpacity": 0.35},
+    "style": {"text": {"baseline": "middle"}}
+  }
 }

@@ -238,6 +238,7 @@
   "config": {
     "background": "white",
     "axis": {"domain": false, "ticks": false, "labels": false, "grid": false},
+    "legend": {"unselectedOpacity": 0.35},
     "style": {"cell": {"stroke": ""}}
   }
 }

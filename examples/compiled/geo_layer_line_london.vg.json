@@ -138,11 +138,18 @@
       "stroke": "color",
       "gradientLength": {"signal": "clamp(height, 64, 200)"},
       "symbolType": "circle",
-      "encode": {"symbols": {"update": {"fill": {"value": "transparent"}}}}
+      "encode": {
+        "symbols": {
+          "name": "id_legend_symbols",
+          "interactive": false,
+          "update": {"fill": {"value": "transparent"}}
+        }
+      }
     }
   ],
   "config": {
     "background": "white",
+    "legend": {"unselectedOpacity": 0.35},
     "style": {"cell": {"stroke": "transparent"}}
   }
 }

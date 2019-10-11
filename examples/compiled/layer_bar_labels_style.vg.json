@@ -111,6 +111,7 @@
   ],
   "config": {
     "background": "white",
+    "legend": {"unselectedOpacity": 0.35},
     "style": {"label": {"align": "left", "baseline": "middle", "dx": 3}}
   }
 }

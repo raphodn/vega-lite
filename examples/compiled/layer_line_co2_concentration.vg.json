@@ -236,6 +236,7 @@
   ],
   "config": {
     "background": "white",
+    "legend": {"unselectedOpacity": 0.35},
     "style": {"text": {"align": "left", "dx": 3, "dy": 1}}
   }
 }

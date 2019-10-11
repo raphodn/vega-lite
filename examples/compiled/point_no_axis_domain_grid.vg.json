@@ -75,5 +75,9 @@
       "zindex": 0
     }
   ],
-  "config": {"background": "white", "axis": {"domain": false, "grid": false}}
+  "config": {
+    "background": "white",
+    "axis": {"domain": false, "grid": false},
+    "legend": {"unselectedOpacity": 0.35}
+  }
 }

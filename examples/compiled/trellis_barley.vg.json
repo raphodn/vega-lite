@@ -231,8 +231,14 @@
       },
       "symbolType": "circle",
       "title": "year",
-      "encode": {"symbols": {"update": {"fill": {"value": "transparent"}}}}
+      "encode": {
+        "symbols": {
+          "name": "year_legend_symbols",
+          "interactive": false,
+          "update": {"fill": {"value": "transparent"}}
+        }
+      }
     }
   ],
-  "config": {"background": "white"}
+  "config": {"background": "white", "legend": {"unselectedOpacity": 0.35}}
 }

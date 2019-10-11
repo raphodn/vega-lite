@@ -232,6 +232,8 @@
       "title": "population",
       "encode": {
         "symbols": {
+          "name": "population_legend_symbols",
+          "interactive": false,
           "update": {
             "fill": {"value": "#000"},
             "opacity": {"value": 0.7},
@@ -241,5 +243,5 @@
       }
     }
   ],
-  "config": {"background": "white"}
+  "config": {"background": "white", "legend": {"unselectedOpacity": 0.35}}
 }

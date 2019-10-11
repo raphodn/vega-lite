@@ -161,6 +161,7 @@
   ],
   "config": {
     "background": "white",
+    "legend": {"unselectedOpacity": 0.35},
     "style": {"area": {"interpolate": "monotone"}}
   }
 }

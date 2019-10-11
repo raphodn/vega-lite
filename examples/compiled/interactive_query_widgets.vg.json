@@ -221,8 +221,14 @@
       "gradientLength": {"signal": "clamp(height, 64, 200)"},
       "symbolType": "circle",
       "title": "Origin",
-      "encode": {"symbols": {"update": {"opacity": {"value": 0.7}}}}
+      "encode": {
+        "symbols": {
+          "name": "Origin_legend_symbols",
+          "interactive": false,
+          "update": {"opacity": {"value": 0.7}}
+        }
+      }
     }
   ],
-  "config": {"background": "white"}
+  "config": {"background": "white", "legend": {"unselectedOpacity": 0.35}}
 }

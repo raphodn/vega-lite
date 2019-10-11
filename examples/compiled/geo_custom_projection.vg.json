@@ -63,5 +63,9 @@
       }
     }
   ],
-  "config": {"background": "white", "style": {"cell": {"stroke": null}}}
+  "config": {
+    "background": "white",
+    "legend": {"unselectedOpacity": 0.35},
+    "style": {"cell": {"stroke": null}}
+  }
 }

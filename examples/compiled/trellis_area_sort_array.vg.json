@@ -225,5 +225,5 @@
       "title": "symbol"
     }
   ],
-  "config": {"background": "white"}
+  "config": {"background": "white", "legend": {"unselectedOpacity": 0.35}}
 }

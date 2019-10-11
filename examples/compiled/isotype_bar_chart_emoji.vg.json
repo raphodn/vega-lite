@@ -143,5 +143,9 @@
       "padding": 0.5
     }
   ],
-  "config": {"background": "white", "style": {"cell": {"stroke": ""}}}
+  "config": {
+    "background": "white",
+    "legend": {"unselectedOpacity": 0.35},
+    "style": {"cell": {"stroke": ""}}
+  }
 }

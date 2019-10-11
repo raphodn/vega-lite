@@ -301,5 +301,9 @@
       "zindex": 0
     }
   ],
-  "config": {"background": "white", "style": {"text": {"fontWeight": "bold"}}}
+  "config": {
+    "background": "white",
+    "legend": {"unselectedOpacity": 0.35},
+    "style": {"text": {"fontWeight": "bold"}}
+  }
 }

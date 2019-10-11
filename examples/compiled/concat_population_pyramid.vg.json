@@ -284,6 +284,7 @@
   "config": {
     "background": "white",
     "axis": {"grid": false},
+    "legend": {"unselectedOpacity": 0.35},
     "style": {"cell": {"stroke": null}}
   }
 }

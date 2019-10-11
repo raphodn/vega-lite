@@ -168,6 +168,8 @@
       "title": "Cylinders",
       "encode": {
         "symbols": {
+          "name": "Cylinders_legend_symbols",
+          "interactive": false,
           "update": {
             "fill": {"value": "transparent"},
             "opacity": {"value": 0.7}
@@ -176,5 +178,5 @@
       }
     }
   ],
-  "config": {"background": "white"}
+  "config": {"background": "white", "legend": {"unselectedOpacity": 0.35}}
 }

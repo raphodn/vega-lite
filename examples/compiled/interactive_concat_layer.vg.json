@@ -253,6 +253,8 @@
           "symbolType": "circle",
           "encode": {
             "symbols": {
+              "name": "undefined_legend_symbols",
+              "interactive": false,
               "update": {
                 "fill": {"value": "transparent"},
                 "stroke": {"value": "#666"}
@@ -415,5 +417,5 @@
       "zero": true
     }
   ],
-  "config": {"background": "white"}
+  "config": {"background": "white", "legend": {"unselectedOpacity": 0.35}}
 }

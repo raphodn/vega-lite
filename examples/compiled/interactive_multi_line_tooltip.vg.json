@@ -198,5 +198,9 @@
       "zindex": 0
     }
   ],
-  "config": {"background": "white", "axisY": {"minExtent": 30}}
+  "config": {
+    "background": "white",
+    "axisY": {"minExtent": 30},
+    "legend": {"unselectedOpacity": 0.35}
+  }
 }
